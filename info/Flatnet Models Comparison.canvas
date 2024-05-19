@@ -1,0 +1,26 @@
+{
+	"nodes":[
+		{"id":"5d05f04b4789ea4d","type":"group","x":-2000,"y":-529,"width":440,"height":829,"color":"6","label":"Flatnetlite"},
+		{"id":"7d6faff44d11bb06","type":"group","x":-200,"y":-100,"width":880,"height":380,"color":"1","label":"CLIP"},
+		{"id":"8f9208d3e84d248d","type":"group","x":-1080,"y":-960,"width":880,"height":375,"label":"Best"},
+		{"id":"cfb4808a265e8ce2","type":"group","x":-2000,"y":-960,"width":440,"height":373,"color":"5","label":"Regular MNIST Classifier"},
+		{"id":"fbe1a275eccc3e6e","type":"file","file":"Tübingen/Master's Thesis/assets/CLIP (ViT-L-14).png","x":-180,"y":-60,"width":400,"height":313},
+		{"id":"5167470572a5f48f","type":"file","file":"Tübingen/Master's Thesis/assets/Flatnet 8.png","x":-1060,"y":-485,"width":400,"height":314},
+		{"id":"1657ae38a78ae219","type":"file","file":"Tübingen/Master's Thesis/assets/Flatnet 7.png","x":-1520,"y":-488,"width":400,"height":313},
+		{"id":"f500c7b4072f0a00","type":"file","file":"Tübingen/Master's Thesis/assets/Flatnet 13.png","x":-1520,"y":-53,"width":400,"height":313},
+		{"id":"e3657a2da8ea1fec","type":"file","file":"Tübingen/Master's Thesis/assets/Flatnet 0 (lite).png","x":-1980,"y":-488,"width":400,"height":313},
+		{"id":"3129a5e906d6a2f6","type":"file","file":"Tübingen/Master's Thesis/assets/Flatnet 1 (lite).png","x":-1980,"y":-54,"width":400,"height":314},
+		{"id":"ef39d0c7414e1fe6","type":"file","file":"Tübingen/Master's Thesis/assets/Flatnet 3.png","x":-1060,"y":-918,"width":400,"height":313},
+		{"id":"04691146dc675cf6","type":"file","file":"Tübingen/Master's Thesis/assets/Flatnet 15.png","x":-1980,"y":-921,"width":400,"height":314},
+		{"id":"7e865886131c3694","type":"file","file":"Tübingen/Master's Thesis/assets/Flatnet 2.png","x":-1520,"y":-918,"width":400,"height":314},
+		{"id":"372657e3d2360496","type":"file","file":"Tübingen/Master's Thesis/assets/Flatnet 12.png","x":-1060,"y":-54,"width":400,"height":313},
+		{"id":"ade10574fb0d35b5","type":"file","file":"Tübingen/Master's Thesis/assets/Flatnet 4.png","x":-620,"y":-918,"width":400,"height":313},
+		{"id":"8013e9fbc784837a","type":"file","file":"Tübingen/Master's Thesis/assets/Flatnet 9.png","x":-620,"y":-484,"width":400,"height":313},
+		{"id":"91dee16d9b4b8086","type":"file","file":"Tübingen/Master's Thesis/assets/Flatnet 5.png","x":-180,"y":-918,"width":400,"height":313},
+		{"id":"d04bd4c6047e2ccd","type":"file","file":"Tübingen/Master's Thesis/assets/Flatnet 10.png","x":-180,"y":-484,"width":400,"height":313},
+		{"id":"628e06aab3bcd55a","type":"file","file":"Tübingen/Master's Thesis/assets/Flatnet 6.png","x":260,"y":-921,"width":400,"height":313},
+		{"id":"895ad28dd1cb0df7","type":"file","file":"Tübingen/Master's Thesis/assets/Flatnet 11.png","x":260,"y":-484,"width":400,"height":313},
+		{"id":"693027b91558624b","type":"file","file":"Tübingen/Master's Thesis/assets/CLIP (RN50x16).png","x":260,"y":-60,"width":400,"height":314}
+	],
+	"edges":[]
+}
