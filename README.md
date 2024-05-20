@@ -2,11 +2,10 @@
 
 > Results of experiments with entropy regularization, using a toy CNN classifier for pixelated MNIST images.  
 
-Entropy regularization in given in the context of a multi-label image classification problem between labels,
+Entropy regularization for a multi-label image classification problem is given by,
 
-```math
-    L(\bm{i}, \bm{l}) = L_{\iota}(\bm{i}, \bm{l}) \underbrace{+ \kappa \sum_{\mathbf{i}_k \in \bm{i}}\sum_{\mathbf{l}_j \in \bm{l}} p(\mathbf{l}_j; \mathbf{i}_k, \bm{l}) \log p(\mathbf{l}_j; \mathbf{i}_k, \bm{l})}_{\text{Entropy Regularization}},
-```
+<!-- L(\mathbf{i}, \mathbf{l}) = L_{\iota}(\mathbf{i}, \mathbf{l}) \underbrace{+ \kappa \sum_{i_k \in \mathbf{i}}\sum_{l_j \in \mathbf{l}} p(l_j; i_k, \mathbf{l}) \log p(l_j; i_k, \mathbf{l})}_{\text{Entropy Regularization}}, -->
+![equation](https://latex.codecogs.com/svg.image?&space;L(\mathbf{i},\mathbf{l})=L_{\iota}(\mathbf{i},\mathbf{l})\underbrace{&plus;\kappa\sum_{i_k\in\mathbf{i}}\sum_{l_j\in\mathbf{l}}p(l_j;i_k,\mathbf{l})\log&space;p(l_j;i_k,\mathbf{l})}_{\text{Entropy&space;Regularization}},)
 
 where $L_{\iota}(\bm{i}, \bm{l})$ is the original loss of the model given a batch of input images $\bm{i}$ and labels $\bm{l}$, $\kappa$ is the regularization strength, and $p(\mathbf{l}_j; \mathbf{i}_k, \bm{l})$ is the probability of the $j$-th label given the $k$-th image.
 
