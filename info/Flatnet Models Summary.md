@@ -1,9 +1,5 @@
 ## Flatnet Comparison Table
 
-$$
-    L(\bmi, \bml) = L_{\iota}(\bmi, \bml) \underbrace{- \kappa \sum_{\bfi_k \in \bmi}\sum_{\bfl_j \in \bml} p(\bfl_j; \bfi_k, \bml) \log p(\bfl_j; \bfi_k, \bml)}_{\text{Entropy Regularization}},\\
-$$
-
 |       Note        |                                        Serial | Type        | MNIST Size | Random Size | $\kappa$ | Epochs |
 | :---------------: | --------------------------------------------: | ----------- | ---------- | ----------- | -------- | ------ |
 |                   | [Flatnet 0 (lite)](./Flatnet%200%20(lite).md) | flatnetlite | 60000      | 0           | 0.0      | 8      |
@@ -22,13 +18,12 @@ $$
 |         -         |               [Flatnet 13](./Flatnet%2013.md) | flatnet     | 60000      | 60000       | 0.0      | 8      |
 |                   |               [Flatnet 15](./Flatnet%2015.md) | flatnet     | 60000      | 0           | 0.0      | 8      |
 
-$\kappa$ = Entropy regularization weight
-Random - Sataset of pixel-grid images with random pixel arrangements
+Random - Dataset of pixel-grid images with random pixel arrangements
 
 ## Complete Table
 
-| -   | [[CLIP_VIT_14]] | CLIP  (ViT-L/14) | < | < | < | < | < | < | < | < | < | < | < | < | < | < | < | < | < | < | < | < | < | < | < |
-| --- |[[CLIP_RN50x16]]   | CLIP  (ViT-L/14) | <     | <          | <      | <           | <      | <           | <       | <            | <     | <          | <                     | <           | <      | <     | <     | <          | <        | <   | <   | <   | <               | <          | <           |
+| -   | [[CLIP_VIT_14](./CLIP_VIT_14.md)] | CLIP  (ViT-L/14) | < | < | < | < | < | < | < | < | < | < | < | < | < | < | < | < | < | < | < | < | < | < | < |
+| --- |[[CLIP_RN50x16]]   | CLIP  (RN50x64) | <     | <          | <      | <           | <      | <           | <       | <            | <     | <          | <                     | <           | <      | <     | <     | <          | <        | <   | <   | <   | <               | <          | <           |
 
 |       Note        |                                        Serial | Type        | MNIST Size | MNIST Test Size | iMNIST Size | iMNIST Test Size | Random Size | Random Test Size | iRandom | iRandom Test | Batch | Batch Test | $\kappa$ | Grid Images | Epochs | LR    | CPU   | Grid Cell Size | Grid Width | Grid Height | Show White Grid | Pixel Shape | Skeleton for MNIST Registration | Threshold Ratio for MNIST Registration | p_pixel(for Random generation) |
 | :---------------: | --------------------------------------------: | ----------- | ---------- | --------------- | ----------- | ---------------- | ----------- | ---------------- | ------- | ------------ | ----- | ---------- | -------- | ----------- | ------ | ----- | ----- | -------------- | ---------- | ----------- | --------------- | ----------- | ------------------------------- | -------------------------------------- | ------------------------------ |
@@ -49,7 +44,7 @@ Random - Sataset of pixel-grid images with random pixel arrangements
 |    Odd one out    |                                    Flatnet 14 | flatnet     | 60000      | 10000           | 60000       | 10000            | 60000       | 10000            | 60000   | 10000        | 64    | ~1         | 0.0      | False       | 10     | 0.001 | False | 8              | 13         | 13          | False           | circles     | True                            | 0.0                                    | 0.030                          |
 |                   |               [Flatnet 15](./Flatnet%2015.md) | flatnet     | 60000      | 10000           | 0           | 0                | 0           | 10000            | 0       | 0            | 128   | 256        | 0.0      | True        | 8      | 0.001 | False | 8              | 28         | 28          | False           | circles     | True                            | 0.0                                    | 0.045                          |
 
-iMNIST - inverted MNIST
+iMNIST - Inverted MNIST images dataset
 
 ## Model Params Comparison
 
