@@ -17,5 +17,5 @@ The expectation is that this would lead to denser rewards, decreased semantic bi
 This repository presents the results of using this entropy regularization in tandem with an augmented training dataset (using random images that should ideally be classified with equal probability among the labels) to train an MNIST classifier.
 
 > [Click here to see the model summary and comparisons](./info/Flatnet%20Models%20Summary.md).  
-> The results can be visualized [here](https://www.sharecanvas.io/p/flatnet-summary).  
+> The results can be visualized [here](https://www.sharecanvas.io/p/flatnet-comparison).  
 > For architecture details of *flatnet*, please see [the code](./flatnet.py).
