@@ -22,8 +22,8 @@ Random - Dataset of pixel-grid images with random pixel arrangements
 
 ## Complete Table
 
-| -   | [[CLIP_VIT_14](./CLIP_VIT_14.md)] | CLIP  (ViT-L/14) | < | < | < | < | < | < | < | < | < | < | < | < | < | < | < | < | < | < | < | < | < | < | < |
-| --- |[[CLIP_RN50x16]]   | CLIP  (RN50x64) | <     | <          | <      | <           | <      | <           | <       | <            | <     | <          | <                     | <           | <      | <     | <     | <          | <        | <   | <   | <   | <               | <          | <           |
+| -   | [CLIP_VIT_14](./CLIP_VIT_14.md) | CLIP  (ViT-L/14) | < | < | < | < | < | < | < | < | < | < | < | < | < | < | < | < | < | < | < | < | < | < | < |
+| --- |[CLIP_RN50x16]   | CLIP  (RN50x64) | <     | <          | <      | <           | <      | <           | <       | <            | <     | <          | <                     | <           | <      | <     | <     | <          | <        | <   | <   | <   | <               | <          | <           |
 
 |       Note        |                                        Serial | Type        | MNIST Size | MNIST Test Size | iMNIST Size | iMNIST Test Size | Random Size | Random Test Size | iRandom | iRandom Test | Batch | Batch Test | $\kappa$ | Grid Images | Epochs | LR    | CPU   | Grid Cell Size | Grid Width | Grid Height | Show White Grid | Pixel Shape | Skeleton for MNIST Registration | Threshold Ratio for MNIST Registration | p_pixel(for Random generation) |
 | :---------------: | --------------------------------------------: | ----------- | ---------- | --------------- | ----------- | ---------------- | ----------- | ---------------- | ------- | ------------ | ----- | ---------- | -------- | ----------- | ------ | ----- | ----- | -------------- | ---------- | ----------- | --------------- | ----------- | ------------------------------- | -------------------------------------- | ------------------------------ |
