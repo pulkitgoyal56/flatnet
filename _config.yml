@@ -2,3 +2,13 @@ author:
     name: Pulkit Goyal
     email: pulkitmds@gmail.com
 description: Results of experiments with entropy regularization, using a toy CNN classifier for pixelated MNIST images.
+
+url: https://pulkitgoyal56.github.io
+baseurl: /flatnet/
+
+gems:
+  - jekyll-relative-links
+
+relative_links:
+  enabled:     true
+  collections: false
