@@ -1,0 +1,13 @@
+title: Flatnet
+author:
+    name: Pulkit Goyal
+    email: pulkitmds@gmail.com
+description: Results of experiments with entropy regularization, using a toy CNN classifier for pixelated MNIST images.
+
+show_downloads: true
+
+# plugins:
+#     - jekyll-feed
+#     - jekyll-seo-tag
+#     - jekyll-sitemap
+#     - jekyll-redirect-from
