@@ -1,3 +1,7 @@
+---
+title: Flatnet Models Summary
+---
+
 ## Flatnet Comparison Table
 
 |       Note        |                                        Serial | Type        | MNIST Size | Random Size | $\kappa$ | Epochs |
