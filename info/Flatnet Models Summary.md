@@ -1,71 +1,61 @@
-|  M  |         Serial          | Name        | Random | $\lambda$ | Epochs |
-|:---:|:-----------------------:| ----------- | ------ | --------- | ------ |
-|  Y  | [[Flatnet 0 (lite)\|0]] | flatnetlite | 0      | 0.0       | 8      |
-|  Y  | [[Flatnet 1 (lite)\|1]] | flatnetlite | 0      | 0.2       | 8      |
-|  Y  |    [[Flatnet 2\|2]]     | flatnet     | 0      | 0.2       | 8      |
-|  Y  |    [[Flatnet 3\|3]]     | flatnet     | 0      | 0.4       | 8      |
-|  Y  |    [[Flatnet 4\|4]]     | flatnet     | 0      | 0.6       | 8      |
-|  Y  |    [[Flatnet 5\|5]]     | flatnet     | 0      | 0.8       | 8      |
-|  Y  |    [[Flatnet 6\|6]]     | flatnet     | 0      | 1.0       | 8      |
-|  Y  |    [[Flatnet 7\|7]]     | flatnet     | 10000  | 0.0       | 8      |
-|  Y  |    [[Flatnet 8\|8]]     | flatnet     | 10000  | 0.3       | 8      |
-|  Y  |    [[Flatnet 9\|9]]     | flatnet     | 10000  | 0.7       | 8      |
-|  Y  |   [[Flatnet 10\|10]]    | flatnet     | 10000  | 0.8       | 4      |
-|  Y  |   [[Flatnet 11\|11]]    | flatnet     | 10000  | 1.0       | 8      |
-|     |   [[Flatnet 12\|12]]    | flatnet     | 0      | 1.0       | 8      |
-|     |   [[Flatnet 13\|13]]    | flatnet     | 60000  | 0.0       | 8      |
-|  Y  |   [[Flatnet 15\|15]]    | flatnet     | 0      | 0.0       | 8      |
+## Flatnet Comparison Table
 
-##### Table dump
+$$
+    L(\bmi, \bml) = L_{\iota}(\bmi, \bml) \underbrace{- \kappa \sum_{\bfi_k \in \bmi}\sum_{\bfl_j \in \bml} p(\bfl_j; \bfi_k, \bml) \log p(\bfl_j; \bfi_k, \bml)}_{\text{Entropy Regularization}},\\
+$$
 
-```
-|  -  | [[CLIP_VIT_14\|0]] | CLIP  (ViT-L/14) | <     | <          | <      | <           | <      | <           | <       | <            | <     | <          | <                     | <           | <      | <     | <          | <        | <   | <   | <   |
-```
+|       Note        |                                        Serial | Type        | MNIST Size | Random Size | $\kappa$ | Epochs |
+| :---------------: | --------------------------------------------: | ----------- | ---------- | ----------- | -------- | ------ |
+|                   | [Flatnet 0 (lite)](./Flatnet%200%20(lite).md) | flatnetlite | 60000      | 0           | 0.0      | 8      |
+|                   | [Flatnet 1 (lite)](./Flatnet%201%20(lite).md) | flatnetlite | 60000      | 0           | 0.2      | 8      |
+|                   |                 [Flatnet 2](./Flatnet%202.md) | flatnet     | 60000      | 0           | 0.2      | 8      |
+|                   |                 [Flatnet 3](./Flatnet%203.md) | flatnet     | 60000      | 0           | 0.4      | 8      |
+|                   |                 [Flatnet 4](./Flatnet%204.md) | flatnet     | 60000      | 0           | 0.6      | 8      |
+|                   |                 [Flatnet 5](./Flatnet%205.md) | flatnet     | 60000      | 0           | 0.8      | 8      |
+|                   |                 [Flatnet 6](./Flatnet%206.md) | flatnet     | 60000      | 0           | 1.0      | 8      |
+|                   |                 [Flatnet 7](./Flatnet%207.md) | flatnet     | 60000      | 10000       | 0.0      | 8      |
+|                   |                 [Flatnet 8](./Flatnet%208.md) | flatnet     | 60000      | 10000       | 0.3      | 8      |
+|                   |                 [Flatnet 9](./Flatnet%209.md) | flatnet     | 60000      | 10000       | 0.7      | 8      |
+|                   |               [Flatnet 10](./Flatnet%2010.md) | flatnet     | 60000      | 10000       | 0.8      | 4      |
+|                   |               [Flatnet 11](./Flatnet%2011.md) | flatnet     | 60000      | 10000       | 1.0      | 8      |
+| Same as Flatnet 6 |               [Flatnet 12](./Flatnet%2012.md) | flatnet     | 60000      | 0           | 1.0      | 8      |
+|         -         |               [Flatnet 13](./Flatnet%2013.md) | flatnet     | 60000      | 60000       | 0.0      | 8      |
+|                   |               [Flatnet 15](./Flatnet%2015.md) | flatnet     | 60000      | 0           | 0.0      | 8      |
 
-|  M  |         Serial          | Name        | MNIST | MNIST Test | iMNIST | iMNIST Test | Random | Random Test | iRandom | iRandom Test | Batch | Batch Test | Regularization Weight | Grid Images | Epochs | CPU   | p_pixel(1) | Skeleton | GCS | GW  | GH  |
-|:---:|:-----------------------:| ----------- | ----- | ---------- | ------ | ----------- | ------ | ----------- | ------- | ------------ | ----- | ---------- | --------------------- | ----------- | ------ | ----- | ---------- | -------- | --- | --- | --- |
-|  Y  | [[Flatnet 0 (lite)\|0]] | flatnetlite | 60000 | 10000      | 0      | 0           | 0      | 10000       | 0       | 0            | 128   | 256        | 0.0                   | True        | 8      | False | 0.045      | True     | 8   | 28  | 28  |
-|  Y  | [[Flatnet 1 (lite)\|1]] | flatnetlite | 60000 | 10000      | 0      | 0           | 0      | 10000       | 0       | 0            | 128   | 256        | 0.2                   | True        | 8      | True  | 0.045      | True     | 8   | 28  | 28  |
-|  Y  |    [[Flatnet 2\|2]]     | flatnet     | 60000 | 10000      | 0      | 0           | 0      | 10000       | 0       | 0            | 128   | 256        | 0.2                   | True        | 8      | False | 0.045      | True     | 8   | 28  | 28  |
-|  Y  |    [[Flatnet 3\|3]]     | flatnet     | 60000 | 10000      | 0      | 0           | 0      | 10000       | 0       | 0            | 128   | 256        | 0.4                   | True        | 8      | False | 0.045      | True     | 8   | 28  | 28  |
-|  Y  |    [[Flatnet 4\|4]]     | flatnet     | 60000 | 10000      | 0      | 0           | 0      | 10000       | 0       | 0            | 128   | 256        | 0.6                   | True        | 8      | False | 0.045      | True     | 8   | 28  | 28  |
-|  Y  |    [[Flatnet 5\|5]]     | flatnet     | 60000 | 10000      | 0      | 0           | 0      | 10000       | 0       | 0            | 128   | 256        | 0.8                   | True        | 8      | False | 0.045      | True     | 8   | 28  | 28  |
-|  Y  |    [[Flatnet 6\|6]]     | flatnet     | 60000 | 10000      | 0      | 0           | 0      | 10000       | 0       | 0            | 128   | 256        | 1.0                   | True        | 8      | False | 0.045      | True     | 8   | 28  | 28  |
-|  Y  |    [[Flatnet 7\|7]]     | flatnet     | 60000 | 10000      | 0      | 0           | 10000  | 10000       | 0       | 0            | 128   | 256        | 0.0                   | True        | 8      | False | 0.045      | True     | 8   | 28  | 28  |
-|  Y  |    [[Flatnet 8\|8]]     | flatnet     | 60000 | 10000      | 0      | 0           | 10000  | 10000       | 0       | 0            | 128   | 256        | 0.3                   | True        | 8      | False | 0.045      | True     | 8   | 28  | 28  |
-|  Y  |    [[Flatnet 9\|9]]     | flatnet     | 60000 | 10000      | 0      | 0           | 10000  | 10000       | 0       | 0            | 128   | 256        | 0.7                   | True        | 8      | False | 0.045      | True     | 8   | 28  | 28  |
-|  Y  |   [[Flatnet 10\|10]]    | flatnet     | 60000 | 10000      | 0      | 0           | 10000  | 10000       | 0       | 0            | 128   | 1          | 0.8                   | True        | 4      | True  | 0.045      | True     | 8   | 28  | 28  |
-|  Y  |   [[Flatnet 11\|11]]    | flatnet     | 60000 | 10000      | 0      | 0           | 10000  | 10000       | 0       | 0            | 128   | 256        | 1.0                   | True        | 8      | False | 0.045      | True     | 8   | 28  | 28  |
-|     |   [[Flatnet 12\|12]]    | flatnet     | 60000 | 10000      | 0      | 0           | 0      | 10000       | 0       | 0            | 128   | ~1         | 1.0                   | True        | 8      | True  | 0.045      | True     | 8   | 28  | 28  |
-|     |   [[Flatnet 13\|13]]    | flatnet     | 60000 | 10000      | 0      | 0           | 60000  | 10000       | 0       | 0            | 128   | ~1         | 0.0                   | True        | 8      | True  | 0.045      | True     | 8   | 28  | 28  |
-|  X  |   [[Flatnet 14\|14]]    | flatnet     | 60000 | 10000      | 60000  | 10000       | 60000  | 10000       | 60000   | 10000        | 64    | ~1         | 0.0                   | False       | 10     | False | 0.030      | True     | 8   | 13  | 13  |
-|  Y  |   [[Flatnet 15\|15]]    | flatnet     | 60000 | 10000      | 0      | 0           | 0      | 10000       | 0       | 0            | 128   | 256        | 0.0                   | True        | 8      | False | 0.045      | True     | 8   | 28  | 28  |
+$\kappa$ = Entropy regularization weight
+Random - Sataset of pixel-grid images with random pixel arrangements
 
-### Important Comparisons
-#### Model Params
+## Complete Table
+
+| -   | [[CLIP_VIT_14]] | CLIP  (ViT-L/14) | < | < | < | < | < | < | < | < | < | < | < | < | < | < | < | < | < | < | < | < | < | < | < |
+| --- |[[CLIP_RN50x16]]   | CLIP  (ViT-L/14) | <     | <          | <      | <           | <      | <           | <       | <            | <     | <          | <                     | <           | <      | <     | <     | <          | <        | <   | <   | <   | <               | <          | <           |
+
+|       Note        |                                        Serial | Type        | MNIST Size | MNIST Test Size | iMNIST Size | iMNIST Test Size | Random Size | Random Test Size | iRandom | iRandom Test | Batch | Batch Test | $\kappa$ | Grid Images | Epochs | LR    | CPU   | Grid Cell Size | Grid Width | Grid Height | Show White Grid | Pixel Shape | Skeleton for MNIST Registration | Threshold Ratio for MNIST Registration | p_pixel(for Random generation) |
+| :---------------: | --------------------------------------------: | ----------- | ---------- | --------------- | ----------- | ---------------- | ----------- | ---------------- | ------- | ------------ | ----- | ---------- | -------- | ----------- | ------ | ----- | ----- | -------------- | ---------- | ----------- | --------------- | ----------- | ------------------------------- | -------------------------------------- | ------------------------------ |
+|                   | [Flatnet 0 (lite)](./Flatnet%200%20(lite).md) | flatnetlite | 60000      | 10000           | 0           | 0                | 0           | 10000            | 0       | 0            | 128   | 256        | 0.0      | True        | 8      | 0.001 | False | 8              | 28         | 28          | False           | circles     | True                            | 0.0                                    | 0.045                          |
+|                   | [Flatnet 1 (lite)](./Flatnet%201%20(lite).md) | flatnetlite | 60000      | 10000           | 0           | 0                | 0           | 10000            | 0       | 0            | 128   | 256        | 0.2      | True        | 8      | 0.001 | True  | 8              | 28         | 28          | False           | circles     | True                            | 0.0                                    | 0.045                          |
+|                   |                 [Flatnet 2](./Flatnet%202.md) | flatnet     | 60000      | 10000           | 0           | 0                | 0           | 10000            | 0       | 0            | 128   | 256        | 0.2      | True        | 8      | 0.001 | False | 8              | 28         | 28          | False           | circles     | True                            | 0.0                                    | 0.045                          |
+|                   |                 [Flatnet 3](./Flatnet%203.md) | flatnet     | 60000      | 10000           | 0           | 0                | 0           | 10000            | 0       | 0            | 128   | 256        | 0.4      | True        | 8      | 0.001 | False | 8              | 28         | 28          | False           | circles     | True                            | 0.0                                    | 0.045                          |
+|                   |                 [Flatnet 4](./Flatnet%204.md) | flatnet     | 60000      | 10000           | 0           | 0                | 0           | 10000            | 0       | 0            | 128   | 256        | 0.6      | True        | 8      | 0.001 | False | 8              | 28         | 28          | False           | circles     | True                            | 0.0                                    | 0.045                          |
+|                   |                 [Flatnet 5](./Flatnet%205.md) | flatnet     | 60000      | 10000           | 0           | 0                | 0           | 10000            | 0       | 0            | 128   | 256        | 0.8      | True        | 8      | 0.001 | False | 8              | 28         | 28          | False           | circles     | True                            | 0.0                                    | 0.045                          |
+|                   |                 [Flatnet 6](./Flatnet%206.md) | flatnet     | 60000      | 10000           | 0           | 0                | 0           | 10000            | 0       | 0            | 128   | 256        | 1.0      | True        | 8      | 0.001 | False | 8              | 28         | 28          | False           | circles     | True                            | 0.0                                    | 0.045                          |
+|                   |                 [Flatnet 7](./Flatnet%207.md) | flatnet     | 60000      | 10000           | 0           | 0                | 10000       | 10000            | 0       | 0            | 128   | 256        | 0.0      | True        | 8      | 0.001 | False | 8              | 28         | 28          | False           | circles     | True                            | 0.0                                    | 0.045                          |
+|                   |                 [Flatnet 8](./Flatnet%208.md) | flatnet     | 60000      | 10000           | 0           | 0                | 10000       | 10000            | 0       | 0            | 128   | 256        | 0.3      | True        | 8      | 0.001 | False | 8              | 28         | 28          | False           | circles     | True                            | 0.0                                    | 0.045                          |
+|                   |                 [Flatnet 9](./Flatnet%209.md) | flatnet     | 60000      | 10000           | 0           | 0                | 10000       | 10000            | 0       | 0            | 128   | 256        | 0.7      | True        | 8      | 0.001 | False | 8              | 28         | 28          | False           | circles     | True                            | 0.0                                    | 0.045                          |
+|                   |               [Flatnet 10](./Flatnet%2010.md) | flatnet     | 60000      | 10000           | 0           | 0                | 10000       | 10000            | 0       | 0            | 128   | 1          | 0.8      | True        | 4      | 0.001 | True  | 8              | 28         | 28          | False           | circles     | True                            | 0.0                                    | 0.045                          |
+|                   |               [Flatnet 11](./Flatnet%2011.md) | flatnet     | 60000      | 10000           | 0           | 0                | 10000       | 10000            | 0       | 0            | 128   | 256        | 1.0      | True        | 8      | 0.001 | False | 8              | 28         | 28          | False           | circles     | True                            | 0.0                                    | 0.045                          |
+| Same as Flatnet 6 |               [Flatnet 12](./Flatnet%2012.md) | flatnet     | 60000      | 10000           | 0           | 0                | 0           | 10000            | 0       | 0            | 128   | ~1         | 1.0      | True        | 8      | 0.001 | True  | 8              | 28         | 28          | False           | circles     | True                            | 0.0                                    | 0.045                          |
+|         -         |               [Flatnet 13](./Flatnet%2013.md) | flatnet     | 60000      | 10000           | 0           | 0                | 60000       | 10000            | 0       | 0            | 128   | ~1         | 0.0      | True        | 8      | 0.001 | True  | 8              | 28         | 28          | False           | circles     | True                            | 0.0                                    | 0.045                          |
+|    Odd one out    |                                    Flatnet 14 | flatnet     | 60000      | 10000           | 60000       | 10000            | 60000       | 10000            | 60000   | 10000        | 64    | ~1         | 0.0      | False       | 10     | 0.001 | False | 8              | 13         | 13          | False           | circles     | True                            | 0.0                                    | 0.030                          |
+|                   |               [Flatnet 15](./Flatnet%2015.md) | flatnet     | 60000      | 10000           | 0           | 0                | 0           | 10000            | 0       | 0            | 128   | 256        | 0.0      | True        | 8      | 0.001 | False | 8              | 28         | 28          | False           | circles     | True                            | 0.0                                    | 0.045                          |
+
+iMNIST - inverted MNIST
+
+## Model Params Comparison
 
 - clip (ViT-L/14) - 427,616,513
 - clip (RN50x16)  - 290,979,217
 - flatnet         -  95,835,914
 - flatnetlite     -  23,912,330
 
-
 ---
-## Complete Original Table (with inconsequential columns at the end removed)
-
-| Name        | MNIST | MNIST Test | iMNIST | iMNIST Test | Random | Random Test | iRandom | iRandom Test | random | Batch | Batch Test | Epochs | LR    | Regularization Weight | CPU   | p_pixel(1) | Seed | Skeleton | Grid Images | GCS | GW  | GH  | Threshold Ratio | White Grid | Pixel Shape |
-| ----------- | ----- | ---------- | ------ | ----------- | ------ | ----------- | ------- | ------------ | ------ | ----- | ---------- | ------ | ----- | --------------------- | ----- | ---------- | ---- | -------- | ----------- | --- | --- | --- | --------------- | ---------- | ----------- |
-| flatnet     | 60000 | 10000      | 0      | 0           | 0      | 10000       | 0       | 0            | random | 128   | 256        | 8      | 0.001 | 0.2                   | False | 0.045      | 5    | True     | True        | 8   | 28  | 28  | 0.0             | False      | circles     |
-| flatnet     | 60000 | 10000      | 0      | 0           | 0      | 10000       | 0       | 0            | random | 128   | 256        | 8      | 0.001 | 0.4                   | False | 0.045      | 5    | True     | True        | 8   | 28  | 28  | 0.0             | False      | circles     |
-| flatnet     | 60000 | 10000      | 0      | 0           | 0      | 10000       | 0       | 0            | random | 128   | 256        | 8      | 0.001 | 0.6                   | False | 0.045      | 5    | True     | True        | 8   | 28  | 28  | 0.0             | False      | circles     |
-| flatnet     | 60000 | 10000      | 0      | 0           | 0      | 10000       | 0       | 0            | random | 128   | 256        | 8      | 0.001 | 0.8                   | False | 0.045      | 5    | True     | True        | 8   | 28  | 28  | 0.0             | False      | circles     |
-| flatnet     | 60000 | 10000      | 0      | 0           | 0      | 10000       | 0       | 0            | random | 128   | 256        | 8      | 0.001 | 1.0                   | False | 0.045      | 5    | True     | True        | 8   | 28  | 28  | 0.0             | False      | circles     |
-| flatnet     | 60000 | 10000      | 0      | 0           | 10000  | 10000       | 0       | 0            | random | 128   | 1          | 4      | 0.001 | 0.8                   | True  | 0.045      | 5    | True     | True        | 8   | 28  | 28  | 0.0             | False      | circles     |
-| flatnet     | 60000 | 10000      | 0      | 0           | 10000  | 10000       | 0       | 0            | random | 128   | 256        | 8      | 0.001 | 0.0                   | False | 0.045      | 5    | True     | True        | 8   | 28  | 28  | 0.0             | False      | circles     |
-| flatnet     | 60000 | 10000      | 0      | 0           | 10000  | 10000       | 0       | 0            | random | 128   | 256        | 8      | 0.001 | 0.3                   | False | 0.045      | 5    | True     | True        | 8   | 28  | 28  | 0.0             | False      | circles     |
-| flatnet     | 60000 | 10000      | 0      | 0           | 10000  | 10000       | 0       | 0            | random | 128   | 256        | 8      | 0.001 | 0.7                   | False | 0.045      | 5    | True     | True        | 8   | 28  | 28  | 0.0             | False      | circles     |
-| flatnet     | 60000 | 10000      | 0      | 0           | 10000  | 10000       | 0       | 0            | random | 128   | 256        | 8      | 0.001 | 1.0                   | False | 0.045      | 5    | True     | True        | 8   | 28  | 28  | 0.0             | False      | circles     |
-| flatnet     | 60000 | 10000      | 0      | 0           | 0      | 10000       | 0       | 0            | random | 128   |            | 8      | 0.001 | 1.0                   | True  | 0.045      | 5    | True     | True        | 8   | 28  | 28  | 0.0             | False      | circles     |
-| flatnet     | 60000 | 10000      | 0      | 0           | 60000  | 10000       | 0       | 0            | random | 128   |            | 8      | 0.001 | 0.0                   | True  | 0.045      | 5    | True     | True        | 8   | 28  | 28  | 0.0             | False      | circles     |
-| flatnet     | 60000 | 10000      | 60000  | 10000       | 60000  | 10000       | 60000   | 10000        | random | 64    |            | 10     | 0.001 | 0.0                   | False | 0.030      | 5    | True     | False       | 8   | 13  | 13  | 0.0             | False      | circles     |
-| flatnetlite | 60000 | 10000      | 0      | 0           | 0      | 10000       | 0       | 0            |        | 128   | 256        | 8      | 0.001 | 0.2                   | True  | 0.045      | 5    | True     | True        | 8   | 28  | 28  | 0.0             | False      | circles     |
