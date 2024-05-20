@@ -1,2 +1,2 @@
-![](assets/Pasted image 20231024032705.png)
-![](assets/Pasted image 20231024032713.png)
+![](assets/Pasted%20image%2020231024032705.png)
+![](assets/Pasted%20image%2020231024032713.png)
